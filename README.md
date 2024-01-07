@@ -7,6 +7,6 @@ I made this specifically for making mods for a game where I wanted to be able to
 
 `AssemblyPostProcess.exe [Optional: Path to input assembly] [Optional: Path to output directory] [Optional: -i (Interactive mode)]`
 
-If no arguments are provides the tool will enter interactive mode and ask the user for input.
+If no arguments are provided, the tool will enter interactive mode and ask the user for input.
 
 If no output directory path is provided, the directory of AssemblyPostProcess.exe will be used.
