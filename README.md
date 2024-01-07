@@ -3,7 +3,7 @@ Uses mono cecil to add random letters to the internal assembly name (not the fil
 
 I made this specifically for making mods for a game where I wanted to be able to hot-reload my mod after making updates without needing to restart the whole application. However trying to load the assembly with new code into the AppDomain would not work. So this essentially makes it work by changing the internal name of the assembly.
 
-Potential downsides of this will be that every assembly will technically stay loaded in memory which could cause excess memory usage. However the convenience is worth it for me as a developer. 
+Potential downsides of this could be that every assembly will technically stay loaded in memory which could cause excess memory usage. It could also cause problems if your assemblies don't know to 'unload' themselves. However the convenience is worth it for me as a developer. 
 
 ## Usage
 
