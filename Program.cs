@@ -28,9 +28,14 @@ else
     throw new Exception("Expected 2 arguments! InputAssemblyPath and OutputDirectory path");
 }
 
-if (assemblyPath == null)
+if (string.IsNullOrWhiteSpace(assemblyPath))
 {
     throw new Exception("Assembly path cannot be null!");
+}
+
+if (string.IsNullOrWhiteSpace(writeDirectory))
+{
+    writeDirectory = null;
 }
 
 Console.WriteLine("Assembly path: " + assemblyPath);
