@@ -27,7 +27,7 @@ else if (args.Length >= 1)
     }
     else
     {
-        assemblyPath = args[0].Replace("\"", "");
+        assemblyPath = args[0];
         if (args.Length >= 2)
         {
             if (args[1] == "-i")
@@ -36,7 +36,7 @@ else if (args.Length >= 1)
             }
             else
             {
-                writeDirectory = args[1].Replace("\"", "");
+                writeDirectory = args[1];
                 if (args.Length >= 3)
                 {
                     if (args[2] == "-i")
@@ -67,10 +67,15 @@ if (string.IsNullOrWhiteSpace(assemblyPath))
     throw new Exception("Assembly path cannot be null or whitespace!");
 }
 
+assemblyPath = RemoveQuotesFromString(assemblyPath);
+
 if (string.IsNullOrWhiteSpace(writeDirectory))
 {
     writeDirectory = null;
-    //interactive = true;
+}
+else
+{
+    writeDirectory = RemoveQuotesFromString(writeDirectory);
 }
 
 if (!Path.Exists(assemblyPath))
@@ -95,6 +100,11 @@ Console.WriteLine("Actual Output directory path: " + writeDirectory);
 Console.WriteLine();
 
 PostProcessAssembly(assemblyPath);
+
+string? RemoveQuotesFromString(string str)
+{
+    return str?.Replace("\"", "").Replace("'", "");
+}
 
 void TakeInput()
 {
