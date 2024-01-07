@@ -130,7 +130,7 @@ string GetRandomString(int charCount)
 	return finalString;
 }
 
-void PostProcessAssembly(string assemblyPath, string? writeDirectoryPath)
+void PostProcessAssembly(string assemblyPath, string? outputDirectoryPath)
 {
 	Console.WriteLine($"Loading assembly from path: \"{assemblyPath}\"");
 
