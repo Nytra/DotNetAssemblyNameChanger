@@ -1,7 +1,7 @@
 # DotNetAssemblyNameChanger
 Uses mono cecil to add random letters to the internal assembly name (not the file name) in a C# .NET Framework assembly to allow it to be loaded into a AppDomain if an assembly with the same internal assembly name already exists in that AppDomain.
 
-I made this specifically for making mods for a game where I wanted to be able to hot-reload my mod. However trying to load the same assembly into the AppDomain even if the code is different would not work. So this essentially makes it work by changing the internal name of the assembly.
+I made this specifically for making mods for a game where I wanted to be able to hot-reload my mod after making updates without needing to restart the whole application. However trying to load the assembly with new code into the AppDomain would not work. So this essentially makes it work by changing the internal name of the assembly.
 
 ## Usage
 
