@@ -62,8 +62,6 @@ void PostProcessAssembly(string assemblyPath)
 {
     Console.WriteLine($"Loading assembly from path: \"{assemblyPath}\"");
 
-    //Assembly assembly = Assembly.LoadFrom(assemblyPath);
-
     ModuleDefinition module = ModuleDefinition.ReadModule(assemblyPath);
 
     Console.WriteLine("Loaded module: " + module.Name);
