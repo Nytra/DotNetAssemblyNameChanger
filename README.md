@@ -9,7 +9,7 @@ Potential downsides of this could be that every assembly will technically stay l
 
 `AssemblyPostProcess.exe [Optional: Path to input assembly] [Optional: Path to output directory] [Optional: -i (Interactive mode)]`
 
-If no arguments are provided, the tool will enter interactive mode and ask the user for input.
+If no arguments are provided, the tool will open and ask the user to input the paths.
 
 If no output directory path is provided, the directory of AssemblyPostProcess.exe will be used.
 
